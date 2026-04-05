@@ -1,0 +1,108 @@
+.page {
+  padding: 2.2rem 1rem 0;
+}
+
+.card {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 2rem 1.2rem;
+  display: grid;
+  gap: 1.4rem;
+  text-align: center;
+  background:
+    linear-gradient(180deg, rgba(251, 252, 241, 0.9), rgba(245, 249, 210, 0.82));
+  border-radius: 1rem;
+  box-shadow: 0 18px 40px rgba(28, 49, 11, 0.06);
+}
+
+.iconWrap {
+  display: flex;
+  justify-content: center;
+}
+
+.iconCircle {
+  width: 4rem;
+  height: 4rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: rgba(154, 177, 160, 0.18);
+  color: var(--color-moss);
+}
+
+.icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.copy {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.title {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.06;
+  letter-spacing: -0.03em;
+  color: var(--color-moss);
+}
+
+.message {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--color-text);
+}
+
+.note {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--color-muted);
+}
+
+.actions {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.primaryButton,
+.secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.9rem;
+  padding: 0 1.15rem;
+  border-radius: 999px;
+}
+
+.primaryButton {
+  background: var(--color-moss);
+  color: var(--color-fog);
+}
+
+.secondaryButton {
+  background: rgba(251, 252, 241, 0.78);
+  color: var(--color-moss);
+  border: 1px solid rgba(28, 49, 11, 0.12);
+}
+
+@media (min-width: 768px) {
+  .page {
+    padding: 2.5rem 1.5rem 0;
+  }
+
+  .card {
+    padding: 2.5rem 2rem;
+    gap: 1.7rem;
+  }
+
+  .actions {
+    justify-content: center;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+  }
+}

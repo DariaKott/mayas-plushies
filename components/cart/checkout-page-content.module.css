@@ -1,0 +1,152 @@
+.page {
+  padding: 2rem 1rem 0;
+}
+
+.title {
+  margin: 0 0 1.4rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: var(--color-moss);
+}
+
+.layout {
+  display: grid;
+  gap: 1.35rem;
+}
+
+.form,
+.summary {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 0.75rem;
+}
+
+.form {
+  background: rgba(251, 252, 241, 0.64);
+}
+
+.summary {
+  align-content: start;
+  background: rgba(223, 234, 227, 0.72);
+}
+
+.field {
+  display: grid;
+  gap: 0.45rem;
+  color: var(--color-text);
+}
+
+.field span {
+  font-size: 0.84rem;
+  color: var(--color-muted);
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  border: 1px solid rgba(28, 49, 11, 0.12);
+  border-radius: 0.65rem;
+  padding: 0.85rem 0.95rem;
+  background: rgba(251, 252, 241, 0.88);
+  color: var(--color-text);
+}
+
+.primaryButton,
+.secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.9rem;
+  padding: 0 1.15rem;
+  border-radius: 999px;
+}
+
+.primaryButton {
+  border: none;
+  background: var(--color-moss);
+  color: var(--color-fog);
+}
+
+.secondaryButton {
+  background: rgba(251, 252, 241, 0.78);
+  color: var(--color-moss);
+  border: 1px solid rgba(28, 49, 11, 0.12);
+}
+
+.summaryTitle,
+.emptyTitle {
+  margin: 0;
+  font-size: 1.08rem;
+  color: var(--color-moss);
+}
+
+.summaryItems {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.summaryRow,
+.totalRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.summaryName,
+.summaryPrice,
+.summaryMeta,
+.emptyDescription {
+  margin: 0;
+}
+
+.summaryName {
+  color: var(--color-text);
+}
+
+.summaryMeta {
+  font-size: 0.84rem;
+  color: var(--color-muted);
+}
+
+.summaryPrice {
+  color: var(--color-moss);
+}
+
+.totalRow {
+  padding-top: 0.9rem;
+  border-top: 1px solid rgba(28, 49, 11, 0.08);
+  color: var(--color-moss);
+}
+
+.emptyState {
+  display: grid;
+  gap: 0.9rem;
+  padding: 1.2rem 0;
+}
+
+.emptyDescription {
+  max-width: 28rem;
+  line-height: 1.65;
+  color: var(--color-muted);
+}
+
+@media (min-width: 900px) {
+  .page {
+    padding: 2.35rem 1.5rem 0;
+  }
+
+  .layout {
+    grid-template-columns: minmax(0, 1fr) minmax(18rem, 23rem);
+    gap: 1.6rem;
+    align-items: start;
+  }
+
+  .form,
+  .summary {
+    padding: 1.25rem;
+  }
+}

@@ -1,0 +1,102 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: linear-gradient(180deg, rgba(251, 252, 241, 0.86), rgba(245, 249, 210, 0.54));
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(28, 49, 11, 0.06);
+}
+
+.inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0.9rem 1rem 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.brandBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.brandRow {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  flex-wrap: wrap;
+}
+
+.brand {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-moss);
+}
+
+.primaryNav {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.primaryLink {
+  font-size: 0.82rem;
+  color: var(--color-muted);
+}
+
+.languageSwitcher {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+}
+
+.languageLink,
+.activeLanguage {
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+.activeLanguage {
+  color: var(--color-moss);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.iconButton {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border: none;
+  background: transparent;
+  color: var(--color-moss);
+}
+
+.icon {
+  width: 1.15rem;
+  height: 1.15rem;
+}
+
+@media (min-width: 768px) {
+  .brandBlock {
+    gap: 0.35rem;
+  }
+
+  .inner {
+    padding: 1rem 1.5rem 0.95rem;
+  }
+}

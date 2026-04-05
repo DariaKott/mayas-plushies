@@ -1,0 +1,271 @@
+.page {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0.8rem 1rem 0;
+}
+
+.homeCanvas {
+  overflow: hidden;
+  border-radius: 2rem 2rem 0 0;
+  box-shadow: 0 20px 60px rgba(28, 49, 11, 0.08);
+}
+
+.hero {
+  position: relative;
+}
+
+.heroContent {
+  position: relative;
+  overflow: hidden;
+  min-height: 35rem;
+  display: flex;
+  align-items: flex-start;
+  padding: 1.5rem 1.3rem 2rem;
+  background:
+    linear-gradient(180deg, rgba(251, 252, 241, 0.2), rgba(251, 252, 241, 0.06)),
+    linear-gradient(90deg, rgba(251, 252, 241, 0.72) 0%, rgba(251, 252, 241, 0.44) 34%, rgba(251, 252, 241, 0.08) 60%),
+    url("/images/background-hero.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.heroText {
+  position: relative;
+  max-width: 22rem;
+  padding: 0.15rem 0 0.2rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.8rem;
+  color: var(--color-olive);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.68rem;
+  font-weight: 700;
+}
+
+.hero .eyebrow {
+  color: var(--color-moss);
+}
+
+.heroTitle {
+  margin: 0;
+  max-width: 10ch;
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 600;
+  font-size: clamp(1.85rem, 5vw, 3rem);
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+  color: var(--color-moss);
+  text-wrap: balance;
+}
+
+.heroDescription {
+  margin: 1.05rem 0 0;
+  max-width: 18rem;
+  font-size: 0.98rem;
+  line-height: 1.65;
+  color: rgba(41, 51, 31, 0.78);
+}
+
+.primaryButton,
+.secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.9rem;
+  padding: 0 1.15rem;
+  margin-top: 1.55rem;
+  font-weight: 700;
+  transition:
+    background-color 120ms ease,
+    color 120ms ease,
+    border-color 120ms ease,
+    transform 120ms ease;
+}
+
+.primaryButton {
+  background: var(--color-moss);
+  color: var(--color-fog);
+  border: 1px solid rgba(28, 49, 11, 0.1);
+  border-radius: 999px;
+}
+
+.secondaryButton {
+  background: rgba(251, 252, 241, 0.78);
+  color: var(--color-moss);
+  border: 1px solid rgba(28, 49, 11, 0.12);
+  border-radius: 999px;
+  box-shadow: 0 8px 24px rgba(28, 49, 11, 0.06);
+}
+
+.section {
+  position: relative;
+}
+
+.featuredSection {
+  padding: 2rem 1rem 2.2rem;
+  background: #dfeae3;
+}
+
+.sectionHeading {
+  display: grid;
+  gap: 0.35rem;
+  margin-bottom: 1.55rem;
+}
+
+.sectionTitle {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 600;
+  font-size: 1.55rem;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  color: var(--color-moss);
+}
+
+.sectionIntro {
+  margin: 0;
+  max-width: 24rem;
+  font-size: 0.95rem;
+  line-height: 1.58;
+  color: var(--color-muted);
+}
+
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 1rem;
+  row-gap: 1.55rem;
+}
+
+.centeredAction {
+  display: flex;
+  justify-content: center;
+  padding-top: 1.55rem;
+}
+
+.benefitsSection {
+  padding: 1.9rem 1.2rem 2rem;
+  background:
+    linear-gradient(180deg, rgba(251, 252, 241, 0.96), rgba(251, 252, 241, 1));
+}
+
+.benefitsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem 1rem;
+  margin-top: 0.85rem;
+}
+
+.benefitItem {
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  gap: 0.38rem;
+  align-items: start;
+}
+
+.benefitDot {
+  width: 0.42rem;
+  height: 0.42rem;
+  margin-top: 0.42rem;
+  border-radius: 999px;
+  background: var(--color-moss);
+}
+
+.benefitCount {
+  display: none;
+}
+
+.benefitItem p {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: var(--color-text);
+}
+
+.aboutSection {
+  background:
+    linear-gradient(180deg, rgba(28, 49, 11, 0.88), rgba(28, 49, 11, 0.98));
+}
+
+.aboutBlock {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1rem;
+  align-items: end;
+  padding: 1.65rem 1.2rem 1.3rem;
+}
+
+.aboutCopy {
+  max-width: 15rem;
+}
+
+.aboutBlock .eyebrow {
+  color: rgba(245, 249, 210, 0.72);
+}
+
+.aboutText {
+  margin: 0;
+  line-height: 1.65;
+  color: rgba(251, 252, 241, 0.86);
+}
+
+.aboutFigure {
+  position: relative;
+  width: 7.8rem;
+  height: 7.8rem;
+  align-self: center;
+}
+
+.aboutFigure::before {
+  content: "";
+  position: absolute;
+  inset: 0.6rem 0.2rem 0 1.2rem;
+  border: 1px solid rgba(245, 249, 210, 0.3);
+  border-radius: 999px 999px 999px 999px / 70% 70% 130% 130%;
+}
+
+.aboutImage {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 6.1rem;
+  height: 6.1rem;
+  object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  .page {
+    padding: 0.95rem 1.75rem 0;
+  }
+
+  .heroContent {
+    min-height: 40rem;
+    padding: 1.9rem 1.8rem 2.4rem;
+    background-position: center right;
+  }
+
+  .heroText {
+    max-width: 24rem;
+    padding-top: 0.7rem;
+  }
+
+  .featuredSection {
+    padding: 2.35rem 1.6rem 2.6rem;
+  }
+
+  .productGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 1.45rem;
+    row-gap: 1.9rem;
+  }
+
+  .benefitsSection {
+    padding: 2rem 1.4rem 2.2rem;
+  }
+
+  .aboutBlock {
+    padding: 1.9rem 1.4rem 1.45rem;
+  }
+}
