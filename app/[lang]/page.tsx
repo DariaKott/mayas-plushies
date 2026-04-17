@@ -22,6 +22,8 @@ export default async function HomePage({ params }: HomePageProps) {
     notFound();
   }
 
+  const featuredProducts = products.filter((product) => product.featured === true);
+
   return (
     <div className={styles.page}>
       <div className={styles.homeCanvas}>
@@ -46,7 +48,7 @@ export default async function HomePage({ params }: HomePageProps) {
             <p className={styles.sectionIntro}>{homeContent.productsIntro[lang]}</p>
           </div>
           <div className={styles.productGrid}>
-            {products.map((product) => (
+            {featuredProducts.map((product) => (
               <ProductCard key={product.id} lang={lang} product={product} />
             ))}
           </div>
@@ -77,16 +79,32 @@ export default async function HomePage({ params }: HomePageProps) {
         <section className={`${styles.section} ${styles.aboutSection}`}>
           <div className={styles.aboutBlock}>
             <div className={styles.aboutCopy}>
-              <p className={styles.eyebrow}>{homeContent.aboutTitle[lang]}</p>
-              <p className={styles.aboutText}>{homeContent.aboutText[lang]}</p>
+              <h3 className={styles.eyebrow}>{homeContent.deliveryTitle[lang]}</h3>
+              <div className={styles.aboutText}>
+                {homeContent.deliveryText[lang].map((paragraph, index, paragraphs) => (
+                  <p key={paragraph}>
+                    {paragraph}
+                    {index === paragraphs.length - 1 ? (
+                      <Image
+                        alt=""
+                        aria-hidden="true"
+                        className={styles.inlineIcon}
+                        height={20}
+                        src="/images/heart-icon.svg"
+                        width={20}
+                      />
+                    ) : null}
+                  </p>
+                ))}
+              </div>
             </div>
             <div className={styles.aboutFigure} aria-hidden="true">
               <Image
                 alt=""
                 className={styles.aboutImage}
-                height={260}
-                src={products[0].images[0]}
-                width={260}
+                height={440}
+                src="/images/monte_map.webp"
+                width={440}
               />
             </div>
           </div>

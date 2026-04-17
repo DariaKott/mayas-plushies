@@ -47,4 +47,5 @@ img {
 
 button {
   font: inherit;
+  cursor: pointer;
 }

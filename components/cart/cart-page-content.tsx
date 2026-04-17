@@ -5,6 +5,7 @@ import Link from "next/link";
 
 import { products } from "@/lib/data/products";
 import type { Language } from "@/lib/i18n";
+import { getProductPrimaryImage } from "@/lib/products";
 
 import { useCart } from "./cart-provider";
 
@@ -117,7 +118,7 @@ export function CartPageContent({ lang }: CartPageContentProps) {
                   alt={item.product.title[lang]}
                   className={styles.image}
                   height={220}
-                  src={item.product.images[0]}
+                  src={getProductPrimaryImage(item.product)}
                   width={220}
                 />
               </div>

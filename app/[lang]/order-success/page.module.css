@@ -77,6 +77,12 @@
   min-height: 2.9rem;
   padding: 0 1.15rem;
   border-radius: 999px;
+  transition:
+    background-color 120ms ease,
+    border-color 120ms ease,
+    box-shadow 120ms ease,
+    transform 120ms ease;
+  cursor: pointer;
 }
 
 .primaryButton {
@@ -88,6 +94,26 @@
   background: rgba(251, 252, 241, 0.78);
   color: var(--color-moss);
   border: 1px solid rgba(28, 49, 11, 0.12);
+}
+
+.primaryButton:hover,
+.primaryButton:focus-visible,
+.secondaryButton:hover,
+.secondaryButton:focus-visible {
+  transform: translateY(-0.12rem);
+}
+
+.primaryButton:hover,
+.primaryButton:focus-visible {
+  background: #233d0e;
+  box-shadow: 0 10px 24px rgba(28, 49, 11, 0.12);
+}
+
+.secondaryButton:hover,
+.secondaryButton:focus-visible {
+  background: rgba(245, 249, 210, 0.88);
+  border-color: rgba(28, 49, 11, 0.16);
+  box-shadow: 0 10px 24px rgba(28, 49, 11, 0.1);
 }
 
 @media (min-width: 768px) {

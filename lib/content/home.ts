@@ -12,6 +12,8 @@ type HomeContent = {
   benefits: Record<Language, string[]>;
   aboutTitle: LocalizedText;
   aboutText: LocalizedText;
+  deliveryTitle: LocalizedText;
+  deliveryText: Record<Language, string[]>;
 };
 
 export const homeContent: HomeContent = {
@@ -84,5 +86,24 @@ export const homeContent: HomeContent = {
     en: "We choose plush animals that feel close to nature: soft, realistic, quietly imaginative, and made to live well in a thoughtful home.",
     ru: "Мы выбираем плюшевых животных, близких к природе: мягких, реалистичных, деликатно воображаемых и созданных для красивой жизни в доме.",
     me: "Biramo plišane životinje koje su bliske prirodi: mekane, realistične, tiho maštovite i stvorene da lijepo žive u pažljivo uređenom domu.",
+  },
+  deliveryTitle: {
+    en: "Delivery",
+    ru: "Доставка",
+    me: "Dostava",
+  },
+  deliveryText: {
+    en: [
+      "We deliver across Montenegro within 2–4 working days.",
+      "If you need your plush sooner or for a special moment, just write to us — we’ll do our best to make it happen.",
+    ],
+    ru: [
+      "Мы доставляем по всей Черногории в течение 2–4 рабочих дней.",
+      "Если вам нужна игрушка быстрее или к особому моменту, просто напишите нам — мы постараемся всё организовать.",
+    ],
+    me: [
+      "Dostavljamo širom Crne Gore u roku od 2–4 radna dana.",
+      "Ako vam je plišana igračka potrebna ranije ili za poseban trenutak, samo nam pišite — potrudićemo se da to omogućimo.",
+    ],
   },
 };

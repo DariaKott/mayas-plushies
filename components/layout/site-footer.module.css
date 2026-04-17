@@ -12,8 +12,9 @@
 
 .title {
   margin: 0 0 0.45rem;
+  font-family: "Libre Baskerville", "Playfair Display", Georgia, "Times New Roman", serif;
   font-weight: 700;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--color-moss);
 }

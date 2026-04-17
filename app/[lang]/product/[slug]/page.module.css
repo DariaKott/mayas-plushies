@@ -2,6 +2,39 @@
   padding: 2rem 1rem 0;
 }
 
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-bottom: 1rem;
+  padding: 0.55rem 0.85rem;
+  border: 1px solid rgba(28, 49, 11, 0.1);
+  border-radius: 999px;
+  background: rgba(251, 252, 241, 0.78);
+  color: var(--color-moss);
+  font-size: 0.88rem;
+  line-height: 1;
+  transition:
+    transform 160ms ease,
+    border-color 160ms ease,
+    background-color 160ms ease;
+}
+
+.backLink:hover,
+.backLink:focus-visible {
+  transform: translateX(-0.18rem);
+  border-color: rgba(28, 49, 11, 0.16);
+  background: rgba(245, 249, 210, 0.72);
+}
+
+.backIcon {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.08rem;
+  color: var(--color-olive);
+  font-size: 0.95rem;
+}
+
 .layout {
   display: grid;
   gap: 1.75rem;
@@ -19,6 +52,7 @@
   border-radius: 0.75rem;
   background: rgba(251, 252, 241, 0.52);
   padding: 0.8rem;
+  touch-action: pan-y;
 }
 
 .mainImage {
@@ -28,13 +62,71 @@
   border-radius: 0.45rem;
 }
 
+.galleryControlZone {
+  position: absolute;
+  top: 0.8rem;
+  bottom: 0.8rem;
+  width: 24%;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  border: none;
+  background: transparent;
+  opacity: 0;
+  transition: opacity 160ms ease;
+}
+
+.galleryControlZone:hover,
+.galleryControlZone:focus-visible {
+  opacity: 1;
+}
+
+.galleryControlZoneLeft {
+  left: 0.8rem;
+  justify-content: flex-start;
+  padding-left: 0.5rem;
+  cursor: w-resize;
+}
+
+.galleryControlZoneRight {
+  right: 0.8rem;
+  justify-content: flex-end;
+  padding-right: 0.5rem;
+  cursor: e-resize;
+}
+
+.galleryArrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 999px;
+  background: rgba(28, 49, 11, 0.72);
+  color: var(--color-fog);
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
 .thumbnailGrid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.8rem;
 }
 
+.thumbnailButton {
+  padding: 0;
+  border: none;
+  background: transparent;
+  text-align: left;
+}
+
+.thumbnailButtonActive .thumbnailWrap {
+  box-shadow: inset 0 0 0 2px rgba(28, 49, 11, 0.16);
+}
+
 .thumbnailWrap {
+  display: block;
   position: relative;
   overflow: hidden;
   aspect-ratio: 1 / 1;
@@ -101,6 +193,20 @@
   border-radius: 999px;
   background: var(--color-moss);
   color: var(--color-fog);
+  transition:
+    background-color 120ms ease,
+    border-color 120ms ease,
+    box-shadow 120ms ease,
+    transform 120ms ease;
+  cursor: pointer;
+}
+
+.button:hover,
+.button:focus-visible {
+  transform: translateY(-0.12rem);
+  background: #233d0e;
+  border-color: rgba(28, 49, 11, 0.16);
+  box-shadow: 0 10px 24px rgba(28, 49, 11, 0.12);
 }
 
 .detailList {

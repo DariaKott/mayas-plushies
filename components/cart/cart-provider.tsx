@@ -9,7 +9,10 @@ import {
   type ReactNode,
 } from "react";
 
+import { products } from "@/lib/data/products";
+
 const STORAGE_KEY = "plushie-grove-cart";
+const validProductIds = new Set(products.map((product) => product.id));
 
 export type CartItem = {
   productId: string;
@@ -42,7 +45,14 @@ export function CartProvider({ children }: CartProviderProps) {
     if (stored) {
       try {
         const parsed = JSON.parse(stored) as CartItem[];
-        setItems(parsed);
+        const sanitized = parsed.filter(
+          (item) =>
+            validProductIds.has(item.productId) &&
+            Number.isFinite(item.quantity) &&
+            item.quantity > 0,
+        );
+
+        setItems(sanitized);
       } catch {
         window.localStorage.removeItem(STORAGE_KEY);
       }
@@ -61,6 +71,10 @@ export function CartProvider({ children }: CartProviderProps) {
 
   const value = useMemo<CartContextValue>(() => {
     const addItem = (productId: string, quantity = 1) => {
+      if (!validProductIds.has(productId) || quantity <= 0) {
+        return;
+      }
+
       setItems((current) => {
         const existing = current.find((item) => item.productId === productId);
 

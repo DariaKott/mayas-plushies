@@ -4,6 +4,7 @@ import Link from "next/link";
 import { AddToCartButton } from "@/components/cart/add-to-cart-button";
 import type { Product } from "@/lib/types/product";
 import type { Language } from "@/lib/i18n";
+import { getProductPrimaryImage } from "@/lib/products";
 
 import styles from "./product-card.module.css";
 
@@ -46,7 +47,7 @@ export function ProductCard({
           <Image
             alt={product.title[lang]}
             className={styles.image}
-            src={product.images[0]}
+            src={getProductPrimaryImage(product)}
             width={720}
             height={820}
           />
