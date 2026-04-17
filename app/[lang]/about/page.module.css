@@ -7,7 +7,7 @@
   background:
     linear-gradient(180deg, rgba(251, 252, 241, 0.16), rgba(28, 49, 11, 0.12)),
     linear-gradient(90deg, rgba(251, 252, 241, 0.72), rgba(251, 252, 241, 0.24) 48%, rgba(251, 252, 241, 0.08)),
-    url("/images/bg-about.jpg");
+    var(--hero-background-image);
   background-size: cover;
   background-position: center;
 }

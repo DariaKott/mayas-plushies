@@ -24,7 +24,7 @@
   background:
     linear-gradient(180deg, rgba(251, 252, 241, 0.2), rgba(251, 252, 241, 0.06)),
     linear-gradient(90deg, rgba(251, 252, 241, 0.72) 0%, rgba(251, 252, 241, 0.44) 34%, rgba(251, 252, 241, 0.08) 60%),
-    url("/images/background-hero.png");
+    var(--hero-background-image);
   background-size: cover;
   background-position: center;
 }

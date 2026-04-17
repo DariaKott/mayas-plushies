@@ -1,5 +1,7 @@
 import { notFound } from "next/navigation";
+import type { CSSProperties } from "react";
 
+import { withBasePath } from "@/lib/assets";
 import { isValidLanguage, type Language } from "@/lib/i18n";
 
 import styles from "./page.module.css";
@@ -97,10 +99,14 @@ export default async function AboutPage({ params }: AboutPageProps) {
   }
 
   const content = aboutContent[lang];
+  const heroBackgroundImage = `url("${withBasePath("/images/bg-about.jpg")}")`;
 
   return (
     <div className={styles.page}>
-      <section className={styles.hero}>
+      <section
+        className={styles.hero}
+        style={{ "--hero-background-image": heroBackgroundImage } as CSSProperties}
+      >
         <div className={styles.heroOverlay}>
           <div className={styles.heroContent}>
             <p className={styles.eyebrow}>Maya&apos;s plushies</p>

@@ -1,7 +1,8 @@
 import type { Language, LocalizedText } from "@/lib/i18n";
 import type { LocalizedProductField, Product } from "@/lib/types/product";
+import { withBasePath } from "@/lib/assets";
 
-export const PRODUCT_IMAGE_PLACEHOLDER = "/images/reference.png";
+export const PRODUCT_IMAGE_PLACEHOLDER = withBasePath("/images/reference.png");
 
 function isLocalizedText(value: LocalizedProductField): value is LocalizedText {
   return typeof value !== "string";
@@ -23,11 +24,15 @@ export function getLocalizedProductField(
 }
 
 export function getProductPrimaryImage(product: Product) {
-  return product.images?.[0] || PRODUCT_IMAGE_PLACEHOLDER;
+  return product.images?.[0]
+    ? withBasePath(product.images[0])
+    : PRODUCT_IMAGE_PLACEHOLDER;
 }
 
 export function getProductGalleryImages(product: Product) {
-  return product.images?.length ? product.images : [PRODUCT_IMAGE_PLACEHOLDER];
+  return product.images?.length
+    ? product.images.map((image) => withBasePath(image))
+    : [PRODUCT_IMAGE_PLACEHOLDER];
 }
 
 export function getProductSize(product: Product) {

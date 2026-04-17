@@ -1,11 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import type { CSSProperties } from "react";
 
 import { ProductCard } from "@/components/product/product-card";
 import { homeContent } from "@/lib/content/home";
 import { isValidLanguage } from "@/lib/i18n";
 import { products } from "@/lib/data/products";
+import { withBasePath } from "@/lib/assets";
 
 import styles from "./page.module.css";
 
@@ -23,11 +25,15 @@ export default async function HomePage({ params }: HomePageProps) {
   }
 
   const featuredProducts = products.filter((product) => product.featured === true);
+  const heroBackgroundImage = `url("${withBasePath("/images/background-hero.png")}")`;
 
   return (
     <div className={styles.page}>
       <div className={styles.homeCanvas}>
-        <section className={styles.hero}>
+        <section
+          className={styles.hero}
+          style={{ "--hero-background-image": heroBackgroundImage } as CSSProperties}
+        >
           <div className={styles.heroContent}>
             <div className={styles.heroText}>
               <p className={styles.eyebrow}>{homeContent.heroKicker[lang]}</p>
@@ -90,7 +96,7 @@ export default async function HomePage({ params }: HomePageProps) {
                         aria-hidden="true"
                         className={styles.inlineIcon}
                         height={20}
-                        src="/images/heart-icon.svg"
+                        src={withBasePath("/images/heart-icon.svg")}
                         width={20}
                       />
                     ) : null}
@@ -103,7 +109,7 @@ export default async function HomePage({ params }: HomePageProps) {
                 alt=""
                 className={styles.aboutImage}
                 height={440}
-                src="/images/monte_map.webp"
+                src={withBasePath("/images/monte_map.webp")}
                 width={440}
               />
             </div>
