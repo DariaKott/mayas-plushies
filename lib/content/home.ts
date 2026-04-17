@@ -23,9 +23,9 @@ export const homeContent: HomeContent = {
     me: "Realistične plišane životinje",
   },
   heroTitle: {
-    en: "Quiet animal companions shaped by forest light and soft hands.",
-    ru: "Тихие плюшевые спутники, вдохновлённые лесным светом и мягкими прикосновениями.",
-    me: "Tihi plišani saputnici oblikovani šumskim svjetlom i mekim dodirom.",
+    en: "Nature-Inspired Plush Toys in Montenegro",
+    ru: "Плюшевые игрушки, вдохновлённые природой, в Черногории",
+    me: "Plišane igračke inspirisane prirodom u Crnoj Gori",
   },
   heroDescription: {
     en: "A calm collection of realistic plush animals with natural palettes, tactile fabrics, and a quietly magical presence.",
